@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Protocolo HTTP</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="mais um blog no Github falando de Java e Tech">
+        <meta name="author" content="Luciano Cunha">
+        <!--<meta name="keywords" content="" th:if="${content.tags != null}" th:content="${#strings.listJoin(content.tags, ' , ')} ?: '' ">-->
+        <meta name="generator" content="JBake">
+        
+        <!--Facebook Card-->
+		<meta property="og:type" content="article" />
+		<meta property="og:title"  content="Protocolo HTTP" />
+		<meta property="og:description" content="mais um blog no Github falando de Java e Tech"/>
+		<meta property="og:image" content="https://shifttodev.github.io/img/yosemite.jpg" />
+        
+        <!--Twitter card -->
+        
+        <meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Protocolo HTTP">
+		<meta name="twitter:creator" content="@shifttodev">
+		<meta name="twitter:description" content="mais um blog no Github falando de Java e Tech">
+		<meta name="twitter:image" content="https://shifttodev.github.io/img/yosemite.jpg">
+		</th:if>
+        <!-- Bootstrap Core CSS -->
+        <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Theme CSS -->
+        <link href="../../css/coderay.css" rel="stylesheet">
+        <link href="../../css/asciidoctor.css" rel="stylesheet">
+        <link href="../../css/clean-blog.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300&amp;text=Shift%20to%20Dev'
+           rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <link rel="shortcut icon" href="../../favicon.png"/>
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="../../index.html">Shift to Dev</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="../../about.html">About</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Page Header -->
+        <!-- Set your background image for this header on the line below. -->
+        <header class="intro-header" style="background-image: url(&#39;../../img/index-cover.jpg&#39;) ; background-color:#101010">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="post-heading">
+                            <h1>Protocolo HTTP</h1>
+                            
+                            <span class="meta">Posted by <b>Luciano Cunha</b> on 
+                                November 13, 2023
+                                </br>
+                                <span> Tags: 
+                                    <span> 
+                                        <a href="../../tags/web.html" class="" >web</a></span> 
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Post Content -->
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><h2>Protocolos, pedidos e respostas</h2>
+<p>A web é basicamente um conjunto de computadores interligados. É através dessa interligação que essas máquinas se comunicam e trocam documentos entre si.</p>
+<p>A arquitetura utilizada em grande escala é chamada de cliente-servidor. Ou seja, o cliente faz um pedido e o servidor responde.</p>
+<p>Desta forma, a comunicação dá-se basicamente atráves de protocolos, pedidos e respostas (requests e responses).</p>
+<p>O protocolo mais comum é o HTTP, que define algumas regras para que essa comunicação aconteça. Entre essas regras, o protocolo HTTP define também um conjunto de verbos, que definem as ações, capazes por realizar essa comunicação e troca de informações.</p>
+<h2>A mensagem do HTTP</h2>
+<p>A mensagem carregada pelo protocolo HTTP tem vários componentes, que de forma geral são:</p>
+<ul>
+<li>Requisição:</li>
+<li>especificação do método</li>
+<li>alvo da requisição</li>
+<li>versão do HTTP</li>
+<li>Resposta:</li>
+<li>Protocolo e versão</li>
+<li>Status da resposta</li>
+</ul>
+<p>A mensagem carregará também vários outros parâmetros. Além disso, dependendo do método a mensagem terá um corpo, necessário para o processamento no servidor.</p>
+<p>Abaixo, um exemplo de como pode ser uma mensagem de request:</p>
+<pre><code>GET / HTTP/1.1
+Host: localhost
+... Outros parâmetros
+</code></pre>
+<p>e um modelo de como pode ser uma mensagem de response:</p>
+<pre><code>HTTP/1.1 200 OK
+... outros parâmetros
+
+</code></pre>
+<p>Entre os parâmetros de envio, podemos destacar um que é o formato da resposta. Quando o cliente requisita algo, ele pode definir ao servidor o formato da resposta que ele espera. Esse formato é definido pelo parâmetro <code>Accept</code>.</p>
+<p>Entre os parâmetros de resposta, podemos destacar um que é o formato do dado enviado. Quando o servidor quer informar ao cliente o formato da resposta, ele pode utilizar o parâmetro <code>Content-Type</code>.</p>
+<h2>Métodos HTTP</h2>
+<p>Os métodos mais comuns do HTTP e suas utilizações na forma mais genéricas são:</p>
+<ul>
+<li>GET: utilizado para requisições ao servidor</li>
+<li>POST: utilizado para enviar dados ao servidor</li>
+<li>PUT: utilizado para atualizar dados no servidor</li>
+<li>DELETE: utilizado para remover dados do servidor</li>
+</ul>
+<p>É através destes métodos que as solicitações ao servidor vão ocorrer no HTTP. Além disso, o servidor poderá utilizar códigos para enviar respostas ao cliente.</p>
+<p>Esses códigos, variam de acordo com o status dessa resposta.</p>
+<p>Os códigos mais comuns nessa comunicação são:</p>
+<ul>
+<li>2xx: OK, requisição respondida com sucesso.</li>
+<li>3xx: Redirecionamento, em razão de alguns recurso que foi movido ou atualiado.</li>
+<li>4xx: Erro no cliente, indiciando algum problema na requisição realizada pelo cliente.</li>
+<li>5xx: Server error, indicando que existe algum erro no processamento no servidor.</li>
+</ul>
+<h2>Stateless</h2>
+<p>Uma característica importante do HTTP é que ele é <code>stateless</code>. Isso quer dizer que ele não guarda estado.</p>
+<p>Por isso, existem algumas formas de contornar essa característica, a fim de dizer ao servidor que um cliente específico já acessou ou que deveria ter acesso a um determinado recurso. São elas:</p>
+<ul>
+<li>Sessão: tempo de utilização da aplicação</li>
+<li>Cookies: arquivo associado ao domínio</li>
+</ul>
+<h2>Finalmentes..</h2>
+<p>Vale lembrar que a web está sempre em evolução, e já está em operação novas versões do protocolo HTTP como a 2 e 3.</p>
+<ul>
+<li><a href="https://nordvpn.com/pt-br/blog/what-is-http2/">What is HTTP/2, and whats does it do?</a></li>
+<li><a href="https://www.cloudflare.com/pt-br/learning/performance/what-is-http3/">O que é HTTP/3</a></li>
+<li><a href="https://dev.to/accreditly/http1-vs-http2-vs-http3-2k1c">HTTP/1 vs HTTP/2 vs HTTP/3</a></li>
+</ul>
+<h2>Para saber mais</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP - MDN Web Docs</a></li>
+</ul>
+</div>
+                </div>
+            </div>
+        </article>
+        <hr/>
+        <div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+                            <div id="disqus_thread"></div>
+                            <script>
+                                var disqus_shortname = "shifttodev-github-io";
+                                var disqus_config = function () {
+                                    this.page.url = "https:\/\/shifttodev.github.io\/blog\/2023\/protocolo-http.html";
+                                    this.page.identifier = "\/home\/luciano\/workspace\/lucianodacunha\/blog\/shifttodev.github.io\/content\/blog\/2023\/protocolo-http.md";
+                                };
+                                (function () { // DON'T EDIT BELOW THIS LINE
+                                    var d = document, s = d.createElement('script');
+                                    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                                    s.setAttribute('data-timestamp', +new Date());
+                                    (d.head || d.body).appendChild(s);
+                                })();
+                            </script>
+                        </div></div></div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <ul class="list-inline text-center"> 
+                            <li>
+                                <a href="../../feed.xml" title="Subscribe to RSS feed">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/shifttodev">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/shifttodev">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <p class="copyright text-muted">&copy;  <span>Luciano Cunha</span> <span>2023</span> | Clean Blog theme by <a href="https://startbootstrap.com/template-overviews/clean-blog/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.6.7</span></a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- jQuery -->
+        <script src="../../vendor/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../../vendor/bootstrap/js/bootstrap.min.js" ></script>
+
+        <!-- Theme JavaScript -->
+        <script src="../../js/clean-blog.min.js"></script>
+
+        
+
+    </body>
+
+</html>
