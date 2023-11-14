@@ -7,17 +7,17 @@ status=published
 
 ## Protocolos, pedidos e respostas
 
-A web é basicamente um conjunto de computadores interligados. É através dessa interligação que essas máquinas se comunicam e trocam documentos entre si.
+A web é essencialmente um conjunto de computadores interligados. É por meio dessa interligação que essas máquinas se comunicam e trocam documentos entre si.
 
-A arquitetura utilizada em grande escala é chamada de cliente-servidor. Ou seja, o cliente faz um pedido e o servidor responde.
+A arquitetura predominantemente utilizada é conhecida como cliente-servidor. Ou seja, o cliente faz um pedido, e o servidor responde.
 
 Desta forma, a comunicação dá-se basicamente atráves de protocolos, pedidos e respostas (requests e responses).
 
-O protocolo mais comum é o HTTP, que define algumas regras para que essa comunicação aconteça. Entre essas regras, o protocolo HTTP define também um conjunto de verbos, que definem as ações, capazes por realizar essa comunicação e troca de informações.
+O protocolo mais comum é o HTTP, que define algumas regras para que essa comunicação aconteça. Dentre essas regras, o protocolo HTTP define um conjunto de verbos que especificam as ações capazes de realizar essa comunicação e troca de informações.
 
 ## A mensagem do HTTP
 
-A mensagem carregada pelo protocolo HTTP tem vários componentes, que de forma geral são:
+A mensagem transmitida pelo protocolo HTTP possui vários componentes, que de maneira geral, incluem:
 
 - Requisição:
   - especificação do método 
@@ -27,7 +27,7 @@ A mensagem carregada pelo protocolo HTTP tem vários componentes, que de forma g
   - Protocolo e versão
   - Status da resposta
   
-A mensagem carregará também vários outros parâmetros. Além disso, dependendo do método a mensagem terá um corpo, necessário para o processamento no servidor.
+A mensagem transmitirá também vários outros parâmetros. Além disso, dependendo do método, a mensagem terá um corpo, necessário para o processamento no servidor.
 
 Abaixo, um exemplo de como pode ser uma mensagem de request:
 
@@ -50,7 +50,7 @@ Entre os parâmetros de resposta, podemos destacar um que é o formato do dado e
 
 ## Métodos HTTP
 
-Os métodos mais comuns do HTTP e suas utilizações na forma mais genéricas são:
+Os métodos mais comuns do HTTP e suas utilizações de forma mais genéricas são:
 
 - GET: utilizado para requisições ao servidor
 - POST: utilizado para enviar dados ao servidor
@@ -70,17 +70,18 @@ Os códigos mais comuns nessa comunicação são:
 
 ## Stateless
 
-Uma característica importante do HTTP é que ele é `stateless`. Isso quer dizer que ele não guarda estado.
+Uma característica importante do HTTP é que ele é `stateless`. Isso quer dizer que ele não mantém estado.
 
 Por isso, existem algumas formas de contornar essa característica, a fim de dizer ao servidor que um cliente específico já acessou ou que deveria ter acesso a um determinado recurso. São elas:
 
 - Sessão: tempo de utilização da aplicação 
 - Cookies: arquivo associado ao domínio
 
-## Finalmentes..
+## Além do HTTP 1.1
 
-Vale lembrar que a web está sempre em evolução, e já está em operação novas versões do protocolo HTTP como a 2 e 3.
+Vale lembrar que a web está sempre em evolução, e já estáão em operação novas versões do protocolo HTTP, como a 2 e 3.
 
+Consulte os links abaixo para mais detalhes:
 
 - [What is HTTP/2, and whats does it do?](https://nordvpn.com/pt-br/blog/what-is-http2/)
 - [O que é HTTP/3](https://www.cloudflare.com/pt-br/learning/performance/what-is-http3/)
