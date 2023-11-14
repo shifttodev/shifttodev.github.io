@@ -6,8 +6,8 @@
     <atom:link href="http://localhost:8820//feed.xml" rel="self" type="application/rss+xml" />
     <description>mais um blog no Github falando de Java e Tech</description>
     <language>en-gb</language>
-    <pubDate>Mon, 13 Nov 2023 21:12:29 -0300</pubDate>
-    <lastBuildDate>Mon, 13 Nov 2023 21:12:29 -0300</lastBuildDate>
+    <pubDate>Mon, 13 Nov 2023 23:10:43 -0300</pubDate>
+    <lastBuildDate>Mon, 13 Nov 2023 23:10:43 -0300</lastBuildDate>
 
     <item>
       <title>Protocolo HTTP</title>

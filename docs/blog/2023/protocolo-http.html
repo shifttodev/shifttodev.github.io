@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>First Post</title>
+        <title>Protocolo HTTP</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="mais um blog no Github falando de Java e Tech">
         <meta name="author" content="Luciano Cunha">
@@ -12,14 +12,14 @@
         
         <!--Facebook Card-->
 		<meta property="og:type" content="article" />
-		<meta property="og:title"  content="First Post" />
+		<meta property="og:title"  content="Protocolo HTTP" />
 		<meta property="og:description" content="mais um blog no Github falando de Java e Tech"/>
 		<meta property="og:image" content="http://localhost:8820//img/yosemite.jpg" />
         
         <!--Twitter card -->
         
         <meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="First Post">
+		<meta name="twitter:title" content="Protocolo HTTP">
 		<meta name="twitter:creator" content="@shifttodev">
 		<meta name="twitter:description" content="mais um blog no Github falando de Java e Tech">
 		<meta name="twitter:image" content="http://localhost:8820//img/yosemite.jpg">
@@ -83,14 +83,14 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <div class="post-heading">
-                            <h1>First Post</h1>
+                            <h1>Protocolo HTTP</h1>
                             
                             <span class="meta">Posted by <b>Luciano Cunha</b> on 
-                                July 24, 2013
+                                November 13, 2023
                                 </br>
                                 <span> Tags: 
                                     <span> 
-                                        <a href="../../tags/blog.html" class="" >blog</a></span> 
+                                        <a href="../../tags/web.html" class="" >web</a></span> 
                                 </span>
                             </span>
                         </div>
@@ -103,34 +103,70 @@
         <article>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.</p>
-
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><h2>Protocolos, pedidos e respostas</h2>
+<p>A web é basicamente um conjunto de computadores interligados. É através dessa interligação que essas máquinas se comunicam e trocam documentos entre si.</p>
+<p>A arquitetura utilizada em grande escala é chamada de cliente-servidor. Ou seja, o cliente faz um pedido e o servidor responde.</p>
+<p>Desta forma, a comunicação dá-se basicamente atráves de protocolos, pedidos e respostas (requests e responses).</p>
+<p>O protocolo mais comum é o HTTP, que define algumas regras para que essa comunicação aconteça. Entre essas regras, o protocolo HTTP define também um conjunto de verbos, que definem as ações, capazes por realizar essa comunicação e troca de informações.</p>
+<h2>A mensagem do HTTP</h2>
+<p>A mensagem carregada pelo protocolo HTTP tem vários componentes, que de forma geral são:</p>
 <ul>
-<li><a href="http://example.org">http://example.org</a></li>
-<li><a href="http://example.org">Example.org</a></li>
+<li>Requisição:</li>
+<li>especificação do método</li>
+<li>alvo da requisição</li>
+<li>versão do HTTP</li>
+<li>Resposta:</li>
+<li>Protocolo e versão</li>
+<li>Status da resposta</li>
 </ul>
+<p>A mensagem carregará também vários outros parâmetros. Além disso, dependendo do método a mensagem terá um corpo, necessário para o processamento no servidor.</p>
+<p>Abaixo, um exemplo de como pode ser uma mensagem de request:</p>
+<pre><code>GET / HTTP/1.1
+Host: localhost
+... Outros parâmetros
+</code></pre>
+<p>e um modelo de como pode ser uma mensagem de response:</p>
+<pre><code>HTTP/1.1 200 OK
+... outros parâmetros
 
-<p>Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu, 
-mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo 
-ligula. Vestibulum tristique odio ut risus ultricies a hendrerit quam iaculis. Duis tempor elit sit amet 
-ligula vehicula et iaculis sem placerat. Fusce dictum, metus at volutpat lacinia, elit massa auctor risus, 
-id auctor arcu enim eu augue. Donec ultrices turpis in mi imperdiet ac venenatis sapien sodales.</p> 
-
-<pre class="prettyprint">
-<code>
-package org.jbake;
-
-public class Oven {
-	public static void main(String[] args) {
-		System.out.print("Baking!");
-  }
-}
-</code>
-</pre>
-
-<p>In consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere 
-libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.</p>
+</code></pre>
+<p>Entre os parâmetros de envio, podemos destacar um que é o formato da resposta. Quando o cliente requisita algo, ele pode definir ao servidor o formato da resposta que ele espera. Esse formato é definido pelo parâmetro <code>Accept</code>.</p>
+<p>Entre os parâmetros de resposta, podemos destacar um que é o formato do dado enviado. Quando o servidor quer informar ao cliente o formato da resposta, ele pode utilizar o parâmetro <code>Content-Type</code>.</p>
+<h2>Métodos HTTP</h2>
+<p>Os métodos mais comuns do HTTP e suas utilizações na forma mais genéricas são:</p>
+<ul>
+<li>GET: utilizado para requisições ao servidor</li>
+<li>POST: utilizado para enviar dados ao servidor</li>
+<li>PUT: utilizado para atualizar dados no servidor</li>
+<li>DELETE: utilizado para remover dados do servidor</li>
+</ul>
+<p>É através destes métodos que as solicitações ao servidor vão ocorrer no HTTP. Além disso, o servidor poderá utilizar códigos para enviar respostas ao cliente.</p>
+<p>Esses códigos, variam de acordo com o status dessa resposta.</p>
+<p>Os códigos mais comuns nessa comunicação são:</p>
+<ul>
+<li>2xx: OK, requisição respondida com sucesso.</li>
+<li>3xx: Redirecionamento, em razão de alguns recurso que foi movido ou atualiado.</li>
+<li>4xx: Erro no cliente, indiciando algum problema na requisição realizada pelo cliente.</li>
+<li>5xx: Server error, indicando que existe algum erro no processamento no servidor.</li>
+</ul>
+<h2>Stateless</h2>
+<p>Uma característica importante do HTTP é que ele é <code>stateless</code>. Isso quer dizer que ele não guarda estado.</p>
+<p>Por isso, existem algumas formas de contornar essa característica, a fim de dizer ao servidor que um cliente específico já acessou ou que deveria ter acesso a um determinado recurso. São elas:</p>
+<ul>
+<li>Sessão: tempo de utilização da aplicação</li>
+<li>Cookies: arquivo associado ao domínio</li>
+</ul>
+<h2>Finalmentes..</h2>
+<p>Vale lembrar que a web está sempre em evolução, e já está em operação novas versões do protocolo HTTP como a 2 e 3.</p>
+<ul>
+<li><a href="https://nordvpn.com/pt-br/blog/what-is-http2/">What is HTTP/2, and whats does it do?</a></li>
+<li><a href="https://www.cloudflare.com/pt-br/learning/performance/what-is-http3/">O que é HTTP/3</a></li>
+<li><a href="https://dev.to/accreditly/http1-vs-http2-vs-http3-2k1c">HTTP/1 vs HTTP/2 vs HTTP/3</a></li>
+</ul>
+<h2>Para saber mais</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP - MDN Web Docs</a></li>
+</ul>
 </div>
                 </div>
             </div>
@@ -142,8 +178,8 @@ libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.</p>
                             <script>
                                 var disqus_shortname = "shifttodev-github-io";
                                 var disqus_config = function () {
-                                    this.page.url = "http:\/\/localhost:8820\/\/blog\/2013\/first-post.html";
-                                    this.page.identifier = "\/home\/luciano\/workspace\/lucianodacunha\/blog\/shifttodev.github.io\/content\/blog\/2013\/first-post.html";
+                                    this.page.url = "http:\/\/localhost:8820\/\/blog\/2023\/protocolo-http.html";
+                                    this.page.identifier = ".\/content\/blog\/2023\/protocolo-http.md";
                                 };
                                 (function () { // DON'T EDIT BELOW THIS LINE
                                     var d = document, s = d.createElement('script');
