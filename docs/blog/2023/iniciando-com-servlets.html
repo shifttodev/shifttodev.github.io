@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Iniciando com Servets</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="mais um blog no Github falando de Java e Tech">
+        <meta name="author" content="Luciano Cunha">
+        <!--<meta name="keywords" content="" th:if="${content.tags != null}" th:content="${#strings.listJoin(content.tags, ' , ')} ?: '' ">-->
+        <meta name="generator" content="JBake">
+        
+        <!--Facebook Card-->
+		<meta property="og:type" content="article" />
+		<meta property="og:title"  content="Iniciando com Servets" />
+		<meta property="og:description" content="mais um blog no Github falando de Java e Tech"/>
+		<meta property="og:image" content="http://localhost:8820//img/yosemite.jpg" />
+        
+        <!--Twitter card -->
+        
+        <meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Iniciando com Servets">
+		<meta name="twitter:creator" content="@shifttodev">
+		<meta name="twitter:description" content="mais um blog no Github falando de Java e Tech">
+		<meta name="twitter:image" content="http://localhost:8820//img/yosemite.jpg">
+		</th:if>
+        <!-- Bootstrap Core CSS -->
+        <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Theme CSS -->
+        <link href="../../css/coderay.css" rel="stylesheet">
+        <link href="../../css/asciidoctor.css" rel="stylesheet">
+        <link href="../../css/clean-blog.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300&amp;text=Shift%20to%20Dev'
+           rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <link rel="shortcut icon" href="../../favicon.png"/>
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="../../index.html">Shift to Dev</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="../../about.html">About</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Page Header -->
+        <!-- Set your background image for this header on the line below. -->
+        <header class="intro-header" style="background-image: url(&#39;../../img/index-cover.jpg&#39;) ; background-color:#101010">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="post-heading">
+                            <h1>Iniciando com Servets</h1>
+                            
+                            <span class="meta">Posted by <b>Luciano Cunha</b> on 
+                                November 18, 2023
+                                </br>
+                                <span> Tags: 
+                                    <span> 
+                                        <a href="../../tags/web.html" class="" >web</a></span><span> 
+                                        <a href="../../tags/java.html" class="" >java</a></span> 
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Post Content -->
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><p>O desenvolvimento web utilizando Java envolve a edição Enterprise (Java EE). Essa implementação, construída sobre a plataforma SE, oferece recursos que viabilizam a criação de aplicações em rede, possibilitando, por conseguinte, o desenvolvimento de aplicativos web.</p>
+<p>Uma tecnologia fundamental no desenvolvimento Web com Java é o Servlet.</p>
+<p>Os Servlets são componentes, que quando instalados em um servidor que implemente um Servlet Container, têm a capacidade de processar requisições e gerar respostas.</p>
+<p>Dentre suas características estão:</p>
+<ul>
+<li>Ciclo de vida bem definido</li>
+<li>Tratamento de requisições</li>
+<li>Gerenciamento de Sessão</li>
+<li>Aspectos Segurança</li>
+</ul>
+<h2>A API de Servlet do Java</h2>
+<p>Para desenvolver um servlet simples, é necessário compreender a hierarquia envolvida nas classes dessa API, implementar suas funcionalidades e realizar o deploy em conjunto com um Servlet Container.</p>
+<p>Para isso, recorreremos à <a href="https://javaee.github.io/javaee-spec/javadocs/">documentação</a>.</p>
+<p>Já no overview, observamos que, nesta edição da API, os pacotes são organizados sob o pacote principal <code>javax</code>.</p>
+<p>Um pacote relevante é o <code>javax.servlet</code>, que, conforme a própria documentação afirma:</p>
+<p><em>The javax.servlet package contains a number of classes and interfaces that<br />
+describe and define the contracts between a servlet class and the runtime<br />
+environment provided for an instance of such a class by a conforming servlet<br />
+container.</em></p>
+<p>Em outras palavras, é nesse ponti que se <em>&quot;inicia&quot;</em> a especificação de servlets. Existem outros pacotes mais especializados, mas, por enquanto, adicionaremos somente o pacote <code>javax.servet.http</code>:</p>
+<p><em>The javax.servlet.http package contains a number of classes and interfaces that<br />
+describe and define the contracts between a servlet class running under the<br />
+HTTP protocol and the runtime environment provided for an instance of such a<br />
+class by a conforming servlet container.</em></p>
+<p>Isso é exatamente o que desejamos: criar um componente capaz de processar requisições feitas com o protocolo HTTP.</p>
+<h2>Criando um Sevlet de exemplo</h2>
+<p>Assumindo a existência de um ambiente com Java 8 e Maven configurado, vamos criar um projeto web utilizando Maven.</p>
+<pre><code class="language-bash">$ mkdir simple-servlet
+$ cd simple-servlet
+$ mvn archetype:generate -DgroupId=io.github.lucianodacunha -DartifactId=simple-servlet -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+</code></pre>
+<p>Utilizando esse archetype, criaremos um projeto web, seguindo a estrutura exigida pela especificação do Servlet.</p>
+<pre><code>├── pom.xml
+└── src
+    └── main
+        └── webapp
+            ├── index.jsp
+            └── WEB-INF
+                └── web.xml
+</code></pre>
+<p>Essa é a estrutura criada com o comando acima ao especificarmos o archetype <code>mave-archetype-webapp</code>.</p>
+<ul>
+<li><code>pom.xml</code>: Esse é o arquivo que descreve todas as configurações do projeto</li>
+<li><code>src/main</code>: Diretório dos códigos-fonte Java.</li>
+<li>src/main/webapp:</li>
+<li><code>index.jsp</code>: página Java Server Page, outra tecnologia JEE.</li>
+<li><code>WEB-INF</code>: Diretório destinada à páginas web e ao descritor dos componentes.
+<ul>
+<li><code>web.xml</code>: Descreve informações das configurações dos componentes Web (Servlets). A partir da versão 3, dos Servlet, esse xml já não é mais tão necessário, possibilitando a publicação de componentes utilizando annotations.</li>
+</ul>
+</li>
+</ul>
+<p>Com base nessa estrutura, desenvolvemos uma classe que implementará um método capaz de processar requisições GET.</p>
+<pre><code class="language-bash">$ mkdir -p src/main/java/servlet
+$ touch src/main/java/servlet/HelloServlet.java
+</code></pre>
+<p>Nessa classe, inserimos o seguinte código:</p>
+<pre><code class="language-java">package servlet;
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.*;
+import javax.servlet.http.*;
+
+@WebServlet(urlPatterns = &quot;/hello&quot;)
+public class HelloServlet extends HttpServlet{
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
+        throws ServletException, IOException {
+            PrintWriter out = resp.getWriter();
+            out.println(&quot;Hello, world!&quot;);
+    }
+}
+</code></pre>
+<p>No código acima, estamos utilizando uma extensão da classe <code>HttpServlet</code> para implementar um método que responde a uma requisição do tipo GET.</p>
+<p>Para isso, importamos os recursos do pacote <code>java.io.*</code>, que proporciona  funcionalidades para impressão e envio de mensagens ao navegador.</p>
+<p>Fazemos uso de classes dos pacotes <code>javax.servlet</code>, que inclui a classe <code>ServletException</code>.</p>
+<p>Alé disso, utilizamos classes do pacote <code>javax.servlet.http</code>, que oferece recursos como a classe <code>HttpServlet</code>. Esta classe abstrata que dever ter pelo menos um de seus métodos sobrecarregados para disponibilizar funcionalidades de requests/responses com HTTP.</p>
+<p>Por fim, empregamos recursos do pacote <code>javax.servlet.annotation</code>, que disponibiliza anotações existentes desde a versão 3 da API. As annotations forma introduzidas para facilitar o desenvolvimento, reduzindo a necessidade do uso de descritores xml.</p>
+<p>Ao acessar o recurso, o usuário receberá uma resposta contendo a expressão <code>Hello, world!</code>.</p>
+<p>Nesse exemplo, implementamos somente o método doGet, que responde às chamadas GET, feitas à aplicação.</p>
+<h2>O arquivo <code>web.xml</code></h2>
+<p>Localizado na pasta <code>WEB-INF</code>, esse arquivo já não é mais tão essencial. A partir da versão 3 da API de Servlet, podemos empregar annotations para realizar configurações, reduzindo consideravelmente o uso de XML no projeto.</p>
+<p>Entretanto, se necessário, ainda podemos configurá-lo para realizar o mapeamento dos Servlets. Na prática, optamos por utilizar annotations ou recorremos ao uso do web.xml.</p>
+<p>Segue abaixo um exemplo de como o arquivo apresentaria, caso não estivessemos utilizando annotations:</p>
+<pre><code class="language-xml">&lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&quot;
+         version=&quot;3.1&quot;&gt;
+    &lt;!-- Opcional a partir da Servlet 3--&gt;
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;HelloServlet&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;servlet.HelloServlet&lt;/servlet-class&gt;
+    &lt;/servlet&gt;  
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;HelloServlet&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/hello&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;    
+&lt;/web-app&gt;
+</code></pre>
+<h2>O arquivo <code>POM.xml</code></h2>
+<p>Esse arquivo descreve todas as configurações do projeto, incluindo dependências e plugins utilizados no Maven.</p>
+<p>Para este projeto, utilizaremos uma dependência do Servlet e um plugin do Jetty.</p>
+<p>Veja abaixo como ficou o arquivo:</p>
+<pre><code class="language-xml">project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+  xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;io.github.lucianodacunha&lt;/groupId&gt;
+  &lt;artifactId&gt;simple-servlet&lt;/artifactId&gt;
+  &lt;packaging&gt;war&lt;/packaging&gt;
+  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+  &lt;name&gt;simple-servlet Maven Webapp&lt;/name&gt;
+  &lt;url&gt;http://maven.apache.org&lt;/url&gt;
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;junit&lt;/groupId&gt;
+      &lt;artifactId&gt;junit&lt;/artifactId&gt;
+      &lt;version&gt;3.8.1&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+      &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
+      &lt;version&gt;3.1.0&lt;/version&gt;
+      &lt;scope&gt;provided&lt;/scope&gt;
+    &lt;/dependency&gt;    
+  &lt;/dependencies&gt;
+  &lt;build&gt;
+    &lt;finalName&gt;simple-servlet&lt;/finalName&gt;
+    &lt;plugins&gt;
+			&lt;plugin&gt;
+				&lt;groupId&gt;org.eclipse.jetty&lt;/groupId&gt;
+				&lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;
+				&lt;version&gt;9.4.28.v20200408&lt;/version&gt;
+				&lt;configuration&gt;
+					&lt;scanIntervalSeconds&gt;10&lt;/scanIntervalSeconds&gt;
+					&lt;webApp&gt;
+						&lt;contextPath&gt;/&lt;/contextPath&gt;
+					&lt;/webApp&gt;
+				&lt;/configuration&gt;
+			&lt;/plugin&gt;
+		&lt;/plugins&gt;    
+  &lt;/build&gt;
+&lt;/project&gt;
+</code></pre>
+<p>O plugin do Jetty é o responsável por publicar o projeto utilizando apenas o goal <code>jetty:run</code> do Maven. Do contrário, seria necessário instalarmos e configurarmos um Servidor Web.</p>
+<h2>Deploy do projeto</h2>
+<p>Nessa etapa, vamos compilar o projeto para o deploy no servidor:</p>
+<p>Na pasta raiz do projeto, execute o comando:</p>
+<pre><code class="language-bash">$ mvn clean package jetty:run
+
+</code></pre>
+<p>Essa sequência de goals irá:<br />
+- limpar a pasta do projeto, caso tenha algo compilado,<br />
+- fazer um novo empacotamento,<br />
+- subir o servidor Jetty e publicar o projeto.</p>
+<p>Para verificar a saída gerada, no navegador, acesse <a href="http://localhost:8080">http://localhost:8080</a>.</p>
+<h2>Para saber mais:</h2>
+<ul>
+<li><a href="https://sdkman.io/">Como instalar e configurar o Java usando SDKMan!</a></li>
+<li><a href="https://maven.apache.org/install.html">Installing Apache Maven</a></li>
+<li><a href="https://eclipse.dev/jetty/documentation/jetty-9/index.html#startup">Jetty : The Definitive Reference</a></li>
+<li><a href="https://eclipse.dev/jetty/documentation/jetty-9/index.html#maven-and-jetty">Maven and Jetty</a></li>
+<li><a href="https://download.oracle.com/otn-pub/jcp/servlet-3_1-fr-eval-spec/servlet-3_1-final.pdf?AuthParam=1700311911_ed34a23ed1055340619adf3292883904">JSR-340: Java Servlet 3.1 Specification</a></li>
+<li><a href="https://eclipse.dev/jetty/">Web Server/Servlet Container Jetty</a></li>
+</ul>
+</div>
+                </div>
+            </div>
+        </article>
+        <hr/>
+        <div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+                            <div id="disqus_thread"></div>
+                            <script>
+                                var disqus_shortname = "shifttodev-github-io";
+                                var disqus_config = function () {
+                                    this.page.url = "http:\/\/localhost:8820\/\/blog\/2023\/iniciando-com-servlets.html";
+                                    this.page.identifier = ".\/content\/blog\/2023\/iniciando-com-servlets.md";
+                                };
+                                (function () { // DON'T EDIT BELOW THIS LINE
+                                    var d = document, s = d.createElement('script');
+                                    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                                    s.setAttribute('data-timestamp', +new Date());
+                                    (d.head || d.body).appendChild(s);
+                                })();
+                            </script>
+                        </div></div></div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <ul class="list-inline text-center"> 
+                            <li>
+                                <a href="../../feed.xml" title="Subscribe to RSS feed">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/shifttodev">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/shifttodev">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <p class="copyright text-muted">&copy;  <span>Luciano Cunha</span> <span>2023</span> | Clean Blog theme by <a href="https://startbootstrap.com/template-overviews/clean-blog/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.6.7</span></a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- jQuery -->
+        <script src="../../vendor/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../../vendor/bootstrap/js/bootstrap.min.js" ></script>
+
+        <!-- Theme JavaScript -->
+        <script src="../../js/clean-blog.min.js"></script>
+
+        
+
+    </body>
+
+</html>

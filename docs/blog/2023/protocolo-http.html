@@ -104,12 +104,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><h2>Protocolos, pedidos e respostas</h2>
-<p>A web é basicamente um conjunto de computadores interligados. É através dessa interligação que essas máquinas se comunicam e trocam documentos entre si.</p>
-<p>A arquitetura utilizada em grande escala é chamada de cliente-servidor. Ou seja, o cliente faz um pedido e o servidor responde.</p>
+<p>A web é essencialmente um conjunto de computadores interligados. É por meio dessa interligação que essas máquinas se comunicam e trocam documentos entre si.</p>
+<p>A arquitetura predominantemente utilizada é conhecida como cliente-servidor. Ou seja, o cliente faz um pedido, e o servidor responde.</p>
 <p>Desta forma, a comunicação dá-se basicamente atráves de protocolos, pedidos e respostas (requests e responses).</p>
-<p>O protocolo mais comum é o HTTP, que define algumas regras para que essa comunicação aconteça. Entre essas regras, o protocolo HTTP define também um conjunto de verbos, que definem as ações, capazes por realizar essa comunicação e troca de informações.</p>
+<p>O protocolo mais comum é o HTTP, que define algumas regras para que essa comunicação aconteça. Dentre essas regras, o protocolo HTTP define um conjunto de verbos que especificam as ações capazes de realizar essa comunicação e troca de informações.</p>
 <h2>A mensagem do HTTP</h2>
-<p>A mensagem carregada pelo protocolo HTTP tem vários componentes, que de forma geral são:</p>
+<p>A mensagem transmitida pelo protocolo HTTP possui vários componentes, que de maneira geral, incluem:</p>
 <ul>
 <li>Requisição:</li>
 <li>especificação do método</li>
@@ -119,7 +119,7 @@
 <li>Protocolo e versão</li>
 <li>Status da resposta</li>
 </ul>
-<p>A mensagem carregará também vários outros parâmetros. Além disso, dependendo do método a mensagem terá um corpo, necessário para o processamento no servidor.</p>
+<p>A mensagem transmitirá também vários outros parâmetros. Além disso, dependendo do método, a mensagem terá um corpo, necessário para o processamento no servidor.</p>
 <p>Abaixo, um exemplo de como pode ser uma mensagem de request:</p>
 <pre><code>GET / HTTP/1.1
 Host: localhost
@@ -133,7 +133,7 @@ Host: localhost
 <p>Entre os parâmetros de envio, podemos destacar um que é o formato da resposta. Quando o cliente requisita algo, ele pode definir ao servidor o formato da resposta que ele espera. Esse formato é definido pelo parâmetro <code>Accept</code>.</p>
 <p>Entre os parâmetros de resposta, podemos destacar um que é o formato do dado enviado. Quando o servidor quer informar ao cliente o formato da resposta, ele pode utilizar o parâmetro <code>Content-Type</code>.</p>
 <h2>Métodos HTTP</h2>
-<p>Os métodos mais comuns do HTTP e suas utilizações na forma mais genéricas são:</p>
+<p>Os métodos mais comuns do HTTP e suas utilizações de forma mais genéricas são:</p>
 <ul>
 <li>GET: utilizado para requisições ao servidor</li>
 <li>POST: utilizado para enviar dados ao servidor</li>
@@ -150,14 +150,15 @@ Host: localhost
 <li>5xx: Server error, indicando que existe algum erro no processamento no servidor.</li>
 </ul>
 <h2>Stateless</h2>
-<p>Uma característica importante do HTTP é que ele é <code>stateless</code>. Isso quer dizer que ele não guarda estado.</p>
+<p>Uma característica importante do HTTP é que ele é <code>stateless</code>. Isso quer dizer que ele não mantém estado.</p>
 <p>Por isso, existem algumas formas de contornar essa característica, a fim de dizer ao servidor que um cliente específico já acessou ou que deveria ter acesso a um determinado recurso. São elas:</p>
 <ul>
 <li>Sessão: tempo de utilização da aplicação</li>
 <li>Cookies: arquivo associado ao domínio</li>
 </ul>
-<h2>Finalmentes..</h2>
-<p>Vale lembrar que a web está sempre em evolução, e já está em operação novas versões do protocolo HTTP como a 2 e 3.</p>
+<h2>Além do HTTP 1.1</h2>
+<p>Vale lembrar que a web está sempre em evolução, e já estáão em operação novas versões do protocolo HTTP, como a 2 e 3.</p>
+<p>Consulte os links abaixo para mais detalhes:</p>
 <ul>
 <li><a href="https://nordvpn.com/pt-br/blog/what-is-http2/">What is HTTP/2, and whats does it do?</a></li>
 <li><a href="https://www.cloudflare.com/pt-br/learning/performance/what-is-http3/">O que é HTTP/3</a></li>

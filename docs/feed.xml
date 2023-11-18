@@ -6,15 +6,21 @@
     <atom:link href="http://localhost:8820//feed.xml" rel="self" type="application/rss+xml" />
     <description>mais um blog no Github falando de Java e Tech</description>
     <language>en-gb</language>
-    <pubDate>Mon, 13 Nov 2023 23:10:43 -0300</pubDate>
-    <lastBuildDate>Mon, 13 Nov 2023 23:10:43 -0300</lastBuildDate>
+    <pubDate>Sat, 18 Nov 2023 14:53:02 -0300</pubDate>
+    <lastBuildDate>Sat, 18 Nov 2023 14:53:02 -0300</lastBuildDate>
 
     <item>
+      <title>Iniciando com Servets</title>
+      <link>http://localhost:8820//blog/2023/iniciando-com-servlets.html</link>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 -0300</pubDate>
+      <guid isPermaLink="false">blog/2023/iniciando-com-servlets.html</guid>
+      <description><p>O desenvolvimento web utilizando Java envolve a edição Enterprise (Java EE). Essa implementação, construída sobre a plataforma SE, oferece recursos que viabilizam a criação de aplicações em rede, possibilitando, por conseguinte, o desenvolvimento de aplicativos web.</p></description>	  
+    </item><item>
       <title>Protocolo HTTP</title>
       <link>http://localhost:8820//blog/2023/protocolo-http.html</link>
       <pubDate>Mon, 13 Nov 2023 00:00:00 -0300</pubDate>
       <guid isPermaLink="false">blog/2023/protocolo-http.html</guid>
-      <description><p>A web é basicamente um conjunto de computadores interligados. É através dessa interligação que essas máquinas se comunicam e trocam documentos entre si.</p></description>	  
+      <description><p>A web é essencialmente um conjunto de computadores interligados. É por meio dessa interligação que essas máquinas se comunicam e trocam documentos entre si.</p></description>	  
     </item><item>
       <title>Hello World</title>
       <link>http://localhost:8820//blog/2023/hello-world.html</link>

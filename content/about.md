@@ -4,10 +4,10 @@ type=page
 status=published
 ~~~~~~
 
-Meu nome é Luciano Cunha.
+Me chamo Luciano Cunha.
 
-Nesse espaço, quero registrar algumas notas de estudos, dos cursos, livros e materias que tenho estudado.
+Este espaço destina-se ao registro de algumas anotações provenientes dos cursos, livros e materiais que tenho dedicado meu tempo para estudar.
 
-Meu objetivo é criar um caderno de notas, para uso pessoal, dos assuntos que estou aprendendo. Porém, sinta-se à vontade para usar como quiser. ;)
+A intenção por trás desse espaço é criar um caderno de notas pessoal, abrangendo os tópicos que estou aprendendo. Contudo, sinta-se à vontade para utilizá-lo da maneira que melhor lhe convier. ;)
 
-Até +.
+Até breve.
