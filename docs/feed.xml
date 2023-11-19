@@ -6,10 +6,16 @@
     <atom:link href="http://localhost:8820//feed.xml" rel="self" type="application/rss+xml" />
     <description>mais um blog no Github falando de Java e Tech</description>
     <language>en-gb</language>
-    <pubDate>Sun, 19 Nov 2023 11:56:27 -0300</pubDate>
-    <lastBuildDate>Sun, 19 Nov 2023 11:56:27 -0300</lastBuildDate>
+    <pubDate>Sun, 19 Nov 2023 18:34:23 -0300</pubDate>
+    <lastBuildDate>Sun, 19 Nov 2023 18:34:23 -0300</lastBuildDate>
 
     <item>
+      <title>Mais sobre JSP&#39;s</title>
+      <link>http://localhost:8820//blog/2023/mais-sobre-jsp.html</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 -0300</pubDate>
+      <guid isPermaLink="false">blog/2023/mais-sobre-jsp.html</guid>
+      <description><p>Em JavaServer Pages (JSP), os objetos implícitos são referências a objetos Java que estão disponíveis automaticamente em cada página JSP, sem a necessidade de serem explicitamente declarados ou inicializados. Esses objetos fornecem funcionalidades específicas que facilitam o desenvolvimento de aplicações web Java.</p></description>	  
+    </item><item>
       <title>Java Server Pages</title>
       <link>http://localhost:8820//blog/2023/java-server-pages.html</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 -0300</pubDate>
