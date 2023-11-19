@@ -6,10 +6,16 @@
     <atom:link href="http://localhost:8820//feed.xml" rel="self" type="application/rss+xml" />
     <description>mais um blog no Github falando de Java e Tech</description>
     <language>en-gb</language>
-    <pubDate>Sat, 18 Nov 2023 14:53:02 -0300</pubDate>
-    <lastBuildDate>Sat, 18 Nov 2023 14:53:02 -0300</lastBuildDate>
+    <pubDate>Sun, 19 Nov 2023 11:56:27 -0300</pubDate>
+    <lastBuildDate>Sun, 19 Nov 2023 11:56:27 -0300</lastBuildDate>
 
     <item>
+      <title>Java Server Pages</title>
+      <link>http://localhost:8820//blog/2023/java-server-pages.html</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 -0300</pubDate>
+      <guid isPermaLink="false">blog/2023/java-server-pages.html</guid>
+      <description><p>Serlvets são classes Java que implementam códigos capazes de lidar com requisições HTTP.</p></description>	  
+    </item><item>
       <title>Iniciando com Servets</title>
       <link>http://localhost:8820//blog/2023/iniciando-com-servlets.html</link>
       <pubDate>Sat, 18 Nov 2023 00:00:00 -0300</pubDate>
