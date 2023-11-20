@@ -6,10 +6,16 @@
     <atom:link href="http://localhost:8820//feed.xml" rel="self" type="application/rss+xml" />
     <description>mais um blog no Github falando de Java e Tech</description>
     <language>en-gb</language>
-    <pubDate>Sun, 19 Nov 2023 18:34:23 -0300</pubDate>
-    <lastBuildDate>Sun, 19 Nov 2023 18:34:23 -0300</lastBuildDate>
+    <pubDate>Mon, 20 Nov 2023 07:04:44 -0300</pubDate>
+    <lastBuildDate>Mon, 20 Nov 2023 07:04:44 -0300</lastBuildDate>
 
     <item>
+      <title>JSP Actions</title>
+      <link>http://localhost:8820//blog/2023/jsp-actions.html</link>
+      <pubDate>Mon, 20 Nov 2023 00:00:00 -0300</pubDate>
+      <guid isPermaLink="false">blog/2023/jsp-actions.html</guid>
+      <description><p>Actions são outro conjunto de tags que são processadas pelo servidor, auxiliando na criação de página dinâmicas, funcionais e que permitam o acesso a objetos Java.</p></description>	  
+    </item><item>
       <title>Mais sobre JSP&#39;s</title>
       <link>http://localhost:8820//blog/2023/mais-sobre-jsp.html</link>
       <pubDate>Sun, 19 Nov 2023 00:00:00 -0300</pubDate>
