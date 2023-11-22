@@ -6,10 +6,16 @@
     <atom:link href="http://localhost:8820//feed.xml" rel="self" type="application/rss+xml" />
     <description>mais um blog no Github falando de Java e Tech</description>
     <language>en-gb</language>
-    <pubDate>Mon, 20 Nov 2023 07:04:44 -0300</pubDate>
-    <lastBuildDate>Mon, 20 Nov 2023 07:04:44 -0300</lastBuildDate>
+    <pubDate>Tue, 21 Nov 2023 21:58:45 -0300</pubDate>
+    <lastBuildDate>Tue, 21 Nov 2023 21:58:45 -0300</lastBuildDate>
 
     <item>
+      <title>JavaBeans</title>
+      <link>http://localhost:8820//blog/2023/javabeans/javabeans.html</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 -0300</pubDate>
+      <guid isPermaLink="false">blog/2023/javabeans/javabeans.html</guid>
+      <description><p>JavaBeans por definição são componentes reutilizáveis e que seguem um conjunto de convenções:</p></description>	  
+    </item><item>
       <title>JSP Actions</title>
       <link>http://localhost:8820//blog/2023/jsp-actions.html</link>
       <pubDate>Mon, 20 Nov 2023 00:00:00 -0300</pubDate>
