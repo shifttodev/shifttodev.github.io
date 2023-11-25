@@ -6,10 +6,16 @@
     <atom:link href="http://localhost:8820//feed.xml" rel="self" type="application/rss+xml" />
     <description>mais um blog no Github falando de Java e Tech</description>
     <language>en-gb</language>
-    <pubDate>Mon, 20 Nov 2023 07:04:44 -0300</pubDate>
-    <lastBuildDate>Mon, 20 Nov 2023 07:04:44 -0300</lastBuildDate>
+    <pubDate>Sat, 25 Nov 2023 17:18:20 -0300</pubDate>
+    <lastBuildDate>Sat, 25 Nov 2023 17:18:20 -0300</lastBuildDate>
 
     <item>
+      <title>Introdução ao JDBC</title>
+      <link>http://localhost:8820//blog/2023/intro-jdbc.html</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 -0300</pubDate>
+      <guid isPermaLink="false">blog/2023/intro-jdbc.html</guid>
+      <description><p>O JDBC, acrônimo para Java Database Connectivity, é um conjunto de pacotes que viabiliza o desenvolvimento de aplicações Java capazes de interagir com bancos de dados relacionais.</p></description>	  
+    </item><item>
       <title>JSP Actions</title>
       <link>http://localhost:8820//blog/2023/jsp-actions.html</link>
       <pubDate>Mon, 20 Nov 2023 00:00:00 -0300</pubDate>
