@@ -238,4 +238,4 @@ O código de update é muito parecido com o código de insert. A maior diferenç
 
 ## Projeto utilizando JDBC
 
-- [intro-jdbc](git@github.com:shifttodev/intro-jdbc.git)
+- [intro-jdbc](https://github.com/shifttodev/intro-jdbc)

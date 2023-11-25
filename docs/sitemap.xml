@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>http://localhost:8820//about.html</loc>
+        <loc>https://shifttodev.github.io/about.html</loc>
         <lastmod>2023-11-12</lastmod>
     </url><url>
-        <loc>http://localhost:8820//blog/2023/intro-jdbc.html</loc>
+        <loc>https://shifttodev.github.io/blog/2023/intro-jdbc.html</loc>
         <lastmod>2023-11-21</lastmod>
     </url><url>
-        <loc>http://localhost:8820//blog/2023/jsp-actions.html</loc>
+        <loc>https://shifttodev.github.io/blog/2023/jsp-actions.html</loc>
         <lastmod>2023-11-20</lastmod>
     </url><url>
-        <loc>http://localhost:8820//blog/2023/mais-sobre-jsp.html</loc>
+        <loc>https://shifttodev.github.io/blog/2023/mais-sobre-jsp.html</loc>
         <lastmod>2023-11-19</lastmod>
     </url><url>
-        <loc>http://localhost:8820//blog/2023/java-server-pages.html</loc>
+        <loc>https://shifttodev.github.io/blog/2023/java-server-pages.html</loc>
         <lastmod>2023-11-19</lastmod>
     </url><url>
-        <loc>http://localhost:8820//blog/2023/iniciando-com-servlets.html</loc>
+        <loc>https://shifttodev.github.io/blog/2023/iniciando-com-servlets.html</loc>
         <lastmod>2023-11-18</lastmod>
     </url><url>
-        <loc>http://localhost:8820//blog/2023/protocolo-http.html</loc>
+        <loc>https://shifttodev.github.io/blog/2023/protocolo-http.html</loc>
         <lastmod>2023-11-13</lastmod>
     </url><url>
-        <loc>http://localhost:8820//blog/2023/hello-world.html</loc>
+        <loc>https://shifttodev.github.io/blog/2023/hello-world.html</loc>
         <lastmod>2023-11-12</lastmod>
     </url>
 </urlset>
