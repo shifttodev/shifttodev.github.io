@@ -6,10 +6,16 @@
     <atom:link href="https://shifttodev.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>mais um blog no Github falando de Java e Tech</description>
     <language>en-gb</language>
-    <pubDate>Sat, 25 Nov 2023 18:38:44 -0300</pubDate>
-    <lastBuildDate>Sat, 25 Nov 2023 18:38:44 -0300</lastBuildDate>
+    <pubDate>Thu, 30 Nov 2023 18:10:14 -0300</pubDate>
+    <lastBuildDate>Thu, 30 Nov 2023 18:10:14 -0300</lastBuildDate>
 
     <item>
+      <title>EL &amp; JSTL</title>
+      <link>https://shifttodev.github.io/blog/2023/el-jstl.html</link>
+      <pubDate>Wed, 29 Nov 2023 00:00:00 -0300</pubDate>
+      <guid isPermaLink="false">blog/2023/el-jstl.html</guid>
+      <description><p>EL é uma linguagem utilizada para simplificar o desenvolvimento Java Web, que permite o acesso a dados em ambiente JSP.</p></description>	  
+    </item><item>
       <title>Introdução ao JDBC</title>
       <link>https://shifttodev.github.io/blog/2023/intro-jdbc.html</link>
       <pubDate>Tue, 21 Nov 2023 00:00:00 -0300</pubDate>

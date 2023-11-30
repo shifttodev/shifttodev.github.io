@@ -1,10 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 
     <head>
         <meta charset="utf-8">
-        <title>Shift to Dev</title>
+        <title>EL &amp; JSTL</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="mais um blog no Github falando de Java e Tech">
         <meta name="author" content="Luciano Cunha">
@@ -13,27 +12,27 @@
         
         <!--Facebook Card-->
 		<meta property="og:type" content="article" />
-		<meta property="og:title"  content="Shift to Dev" />
+		<meta property="og:title"  content="EL &amp; JSTL" />
 		<meta property="og:description" content="mais um blog no Github falando de Java e Tech"/>
 		<meta property="og:image" content="https://shifttodev.github.io/img/yosemite.jpg" />
         
         <!--Twitter card -->
         
         <meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="Shift to Dev">
+		<meta name="twitter:title" content="EL &amp; JSTL">
 		<meta name="twitter:creator" content="@shifttodev">
 		<meta name="twitter:description" content="mais um blog no Github falando de Java e Tech">
 		<meta name="twitter:image" content="https://shifttodev.github.io/img/yosemite.jpg">
 		</th:if>
         <!-- Bootstrap Core CSS -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Theme CSS -->
-        <link href="css/coderay.css" rel="stylesheet">
-        <link href="css/asciidoctor.css" rel="stylesheet">
-        <link href="css/clean-blog.css" rel="stylesheet">
+        <link href="../../css/coderay.css" rel="stylesheet">
+        <link href="../../css/asciidoctor.css" rel="stylesheet">
+        <link href="../../css/clean-blog.css" rel="stylesheet">
         <!-- Custom Fonts -->
-        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Lato:300&amp;text=Shift%20to%20Dev'
            rel='stylesheet' type='text/css'>
@@ -45,12 +44,11 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <link rel="shortcut icon" href="favicon.png"/>
+        <link rel="shortcut icon" href="../../favicon.png"/>
     </head>
 
     <body>
 
-        <!-- Navigation -->
         <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -59,14 +57,14 @@
                         <span class="sr-only">Toggle navigation</span>
                         Menu <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.html">Shift to Dev</a>
+                    <a class="navbar-brand" href="../../index.html">Shift to Dev</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="about.html">About</a>
+                            <a href="../../about.html">About</a>
                         </li>
                         
                         
@@ -80,123 +78,108 @@
 
         <!-- Page Header -->
         <!-- Set your background image for this header on the line below. -->
-        <header class="intro-header" 
-                style="background-image: url(&#39;img/archive-cover.jpg&#39; ) ; background-color:#101010">
+        <header class="intro-header" style="background-image: url(&#39;../../img/index-cover.jpg&#39;) ; background-color:#101010">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <div class="site-heading">
-                            <h1>Shift to Dev</h1>
-                            <hr class="small" />
-                            <span class="subheading">Archived Posts</span>
+                        <div class="post-heading">
+                            <h1>EL &amp; JSTL</h1>
+                            
+                            <span class="meta">Posted by <b>Luciano Cunha</b> on 
+                                November 29, 2023
+                                </br>
+                                <span> Tags: 
+                                    <span> 
+                                        <a href="../../tags/java.html" class="" >java</a></span><span> 
+                                        <a href="../../tags/web.html" class="" >web</a></span><span> 
+                                        <a href="../../tags/servlet.html" class="" >servlet</a></span><span> 
+                                        <a href="../../tags/jstl.html" class="" >jstl</a></span><span> 
+                                        <a href="../../tags/el.html" class="" >el</a></span> 
+                                </span>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
 
-        <!-- Main Content -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <!-- Post Content -->
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><h2>Expression Language - EL</h2>
+<p>EL é uma linguagem utilizada para simplificar o desenvolvimento Java Web, que permite o acesso a dados em ambiente JSP.</p>
+<p>Exemplo de utilização:</p>
+<pre><code>&lt;jsp:useBean id=&quot;pessoa&quot; class=&quot;app.model.Pessoa&quot;&gt;
+${pessoa.nome}
+</code></pre>
+<p>O código acima, acessa a propriedade <code>nome</code> da classe Pessoa instanciada na declaração <code>jsp:useBean</code>.</p>
+<p>A EL aceita outros recursos como operadores, conversões, boxing, etc.</p>
+<pre><code>${1 + 1}
+${empty pessoa}
+</code></pre>
+<h2>Jakarta Standard Tag Library - JSTL</h2>
+<p>JSTL é um conjunto de libs que estendes as funcionalidades das JSP's, possibilitando o processamento, desenvolvimento lógico e acesso a banco de dados, sem utilizar código scriptlet Java.</p>
+<p>Exemplo:</p>
+<pre><code>&lt;!-- utilizando a instrução if --&gt;
+&lt;c:if test=&quot;${valor &gt; 10}&quot;&gt;
+    &lt;p&gt;Exibe a mensagem&lt;/p&gt;
+&lt;/c:if&gt;
 
-                    <div class="post-preview">
+&lt;!-- utilizando a instrução choose --&gt;
+&lt;c:choose&gt;
+    &lt;c:when test=&quot;${valor &gt; 10}&quot;&gt;
+        &lt;p&gt;Mensagem 1&lt;/p&gt;
+    &lt;/c:when&gt;
+    &lt;c:otherwise&gt;
+        &lt;p&gt;Mensagem 2&lt;/p&gt;
+    &lt;/c:otherwise&gt;
+&lt;/c:choose&gt;
 
-                        
-                            <a>
-                                <hr/>
-                                <h2 class="post-title">November 2023</h2>
-                            </a>
-                            <a href="blog/2023/el-jstl.html">
-                                <h3 class="post-subtitle">EL &amp; JSTL</h3>
-                                
-                            </a>
-                            
-                            
-                        
-                            <a>
-                                <hr/>
-                                <h2 class="post-title">November 2023</h2>
-                            </a>
-                            <a href="blog/2023/intro-jdbc.html">
-                                <h3 class="post-subtitle">Introdução ao JDBC</h3>
-                                
-                            </a>
-                            
-                            
-                        
-                            <a>
-                                <hr/>
-                                <h2 class="post-title">November 2023</h2>
-                            </a>
-                            <a href="blog/2023/jsp-actions.html">
-                                <h3 class="post-subtitle">JSP Actions</h3>
-                                
-                            </a>
-                            
-                            
-                        
-                            <a>
-                                <hr/>
-                                <h2 class="post-title">November 2023</h2>
-                            </a>
-                            <a href="blog/2023/mais-sobre-jsp.html">
-                                <h3 class="post-subtitle">Mais sobre JSP&#39;s</h3>
-                                
-                            </a>
-                            
-                            
-                        
-                            <a>
-                                <hr/>
-                                <h2 class="post-title">November 2023</h2>
-                            </a>
-                            <a href="blog/2023/java-server-pages.html">
-                                <h3 class="post-subtitle">Java Server Pages</h3>
-                                
-                            </a>
-                            
-                            
-                        
-                            <a>
-                                <hr/>
-                                <h2 class="post-title">November 2023</h2>
-                            </a>
-                            <a href="blog/2023/iniciando-com-servlets.html">
-                                <h3 class="post-subtitle">Iniciando com Servets</h3>
-                                
-                            </a>
-                            
-                            
-                        
-                            <a>
-                                <hr/>
-                                <h2 class="post-title">November 2023</h2>
-                            </a>
-                            <a href="blog/2023/protocolo-http.html">
-                                <h3 class="post-subtitle">Protocolo HTTP</h3>
-                                
-                            </a>
-                            
-                            
-                        
-                            <a>
-                                <hr/>
-                                <h2 class="post-title">November 2023</h2>
-                            </a>
-                            <a href="blog/2023/hello-world.html">
-                                <h3 class="post-subtitle">Hello World</h3>
-                                
-                            </a>
-                            
-                            
-                        
-                    </div>
-                    <hr/>
+&lt;!-- utilizando a instrução forEach --&gt;
+&lt;c:forEach var=&quot;pessoa&quot; items=&quot;${pessoas}&quot;&gt;
+    &lt;p&gt;${pessoa}&lt;/p&gt;
+&lt;/c:forEach&gt;
+</code></pre>
+<p>Essas são algumas das tags que podemos utilizar no desenvolvimento de algoritmos dentro de páginas JSP.</p>
+<h2>Instalação</h2>
+<p>Adicione a seguinte dependência no <code>pom.xml</code>.</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+    &lt;artifactId&gt;jstl&lt;/artifactId&gt;
+    &lt;version&gt;1.2&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h2>Projeto utilizando EL e JSTL</h2>
+<ul>
+<li><a href="https://github.com/shifttodev/el-jstl">el-jstl</a></li>
+</ul>
+<h2>Para saber mais</h2>
+<ul>
+<li><a href="https://docs.oracle.com/javaee/5/tutorial/doc/bnake.html">The Java EE 5 Tutorial</a></li>
+</ul>
+</div>
                 </div>
             </div>
-        </div>
-
+        </article>
+        <hr/>
+        <div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+                            <div id="disqus_thread"></div>
+                            <script>
+                                var disqus_shortname = "shifttodev-github-io";
+                                var disqus_config = function () {
+                                    this.page.url = "https:\/\/shifttodev.github.io\/blog\/2023\/el-jstl.html";
+                                    this.page.identifier = ".\/content\/blog\/2023\/el-jstl.md";
+                                };
+                                (function () { // DON'T EDIT BELOW THIS LINE
+                                    var d = document, s = d.createElement('script');
+                                    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                                    s.setAttribute('data-timestamp', +new Date());
+                                    (d.head || d.body).appendChild(s);
+                                })();
+                            </script>
+                        </div></div></div>
         <!-- Footer -->
         <footer>
             <div class="container">
@@ -204,7 +187,7 @@
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <ul class="list-inline text-center"> 
                             <li>
-                                <a href="feed.xml" title="Subscribe to RSS feed">
+                                <a href="../../feed.xml" title="Subscribe to RSS feed">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
                                         <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -236,15 +219,16 @@
         </footer>
 
         <!-- jQuery -->
-        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="../../vendor/jquery/jquery.min.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="vendor/bootstrap/js/bootstrap.min.js" ></script>
+        <script src="../../vendor/bootstrap/js/bootstrap.min.js" ></script>
 
         <!-- Theme JavaScript -->
-        <script src="js/clean-blog.min.js"></script>
+        <script src="../../js/clean-blog.min.js"></script>
 
         
+
     </body>
 
 </html>
