@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>MVC/DAO</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="mais um blog no Github falando de Java e Tech">
+        <meta name="author" content="Luciano Cunha">
+        <!--<meta name="keywords" content="" th:if="${content.tags != null}" th:content="${#strings.listJoin(content.tags, ' , ')} ?: '' ">-->
+        <meta name="generator" content="JBake">
+        
+        <!--Facebook Card-->
+		<meta property="og:type" content="article" />
+		<meta property="og:title"  content="MVC/DAO" />
+		<meta property="og:description" content="mais um blog no Github falando de Java e Tech"/>
+		<meta property="og:image" content="https://shifttodev.github.io/img/yosemite.jpg" />
+        
+        <!--Twitter card -->
+        
+        <meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="MVC/DAO">
+		<meta name="twitter:creator" content="@shifttodev">
+		<meta name="twitter:description" content="mais um blog no Github falando de Java e Tech">
+		<meta name="twitter:image" content="https://shifttodev.github.io/img/yosemite.jpg">
+		</th:if>
+        <!-- Bootstrap Core CSS -->
+        <link href="../../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Theme CSS -->
+        <link href="../../../css/coderay.css" rel="stylesheet">
+        <link href="../../../css/asciidoctor.css" rel="stylesheet">
+        <link href="../../../css/clean-blog.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="../../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300&amp;text=Shift%20to%20Dev'
+           rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <link rel="shortcut icon" href="../../../favicon.png"/>
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="../../../index.html">Shift to Dev</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="../../../about.html">About</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Page Header -->
+        <!-- Set your background image for this header on the line below. -->
+        <header class="intro-header" style="background-image: url(&#39;../../../img/index-cover.jpg&#39;) ; background-color:#101010">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="post-heading">
+                            <h1>MVC/DAO</h1>
+                            
+                            <span class="meta">Posted by <b>Luciano Cunha</b> on 
+                                December 05, 2023
+                                </br>
+                                <span> Tags: 
+                                    <span> 
+                                        <a href="../../../tags/web.html" class="" >web</a></span><span> 
+                                        <a href="../../../tags/java.html" class="" >java</a></span><span> 
+                                        <a href="../../../tags/jsp.html" class="" >jsp</a></span><span> 
+                                        <a href="../../../tags/servlet.html" class="" >servlet</a></span><span> 
+                                        <a href="../../../tags/mvc.html" class="" >mvc</a></span> 
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Post Content -->
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><p><em>Padrões de projetos são soluções típicas para problemas comuns.</em> <a href="https://refactoring.guru/pt-br/design-patterns">Refactoring.guru</a></p>
+<p>Neste projeto, utilizarei dois padrões de projetos muito conhecidos:</p>
+<ul>
+<li>DAO</li>
+<li>MVC</li>
+</ul>
+<h2>Data Access Object - DAO</h2>
+<p>Um padrão que visa abstrair o acesso aos dados. Seu objetivo é possibilitar a mudança da fonte de dados, sem impactar na lógica da aplicação.</p>
+<p>Desta forma, é composto por uma camada, geralmente uma interface que define os métodos de acesso aos dados. A implementação desses métodos, poderá mudar conforma a fonte de dados utilizada.</p>
+<p>Exemplo:</p>
+<pre><code>public interface ILivroDAO {
+    boolean inserir(Livro livro);
+    boolean deletar(String isbn);
+    List&lt;Livro&gt; listar();
+    Livro buscarPorISBN(String isbn);
+    boolean atualizar(Livro livro);
+}
+</code></pre>
+<p>Aqui definimos os métodos de acesso, ou seja, os métodos que estão sendo utilizados pelas regras de negócio da aplicação para recuperar os dados.</p>
+<p>A chamada a esses métodos na lógica da aplicação não deveria mudar. Porém, a implementação desses métodos pode mudar a medida que trabalhamos com uma fonte de dados diferente.</p>
+<h2>Model View Controller - MVC</h2>
+<p>O MVC é um padrão de projeto que visa separar uma aplicação em três camadas distintas:</p>
+<ul>
+<li>Modelo: representa os dados da aplicação</li>
+<li>View: apresenta os dados da aplicação</li>
+<li>Controller: representa a ligação entre a view, recebendo os dados da interface do programa, direciona o fluxo das operações, acessando os dados e disponibilizando para as views.</li>
+</ul>
+<p>A figura abaixo demonstra uma representação desse padrão:</p>
+<p><img src="imgs/mvc.png" alt="" /></p>
+<h2>O projeto MiniMVC</h2>
+<p>O projeto Mini MVC é um CRUD que utiliza desses dois padrões em sua implementação.</p>
+<ul>
+<li><a href="https://github.com/shifttodev/mini-mvc">Mini MVC</a></li>
+</ul>
+</div>
+                </div>
+            </div>
+        </article>
+        <hr/>
+        <div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+                            <div id="disqus_thread"></div>
+                            <script>
+                                var disqus_shortname = "shifttodev-github-io";
+                                var disqus_config = function () {
+                                    this.page.url = "https:\/\/shifttodev.github.io\/blog\/2023\/mvc\/mvc.html";
+                                    this.page.identifier = ".\/content\/blog\/2023\/mvc\/mvc.md";
+                                };
+                                (function () { // DON'T EDIT BELOW THIS LINE
+                                    var d = document, s = d.createElement('script');
+                                    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                                    s.setAttribute('data-timestamp', +new Date());
+                                    (d.head || d.body).appendChild(s);
+                                })();
+                            </script>
+                        </div></div></div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <ul class="list-inline text-center"> 
+                            <li>
+                                <a href="../../../feed.xml" title="Subscribe to RSS feed">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/shifttodev">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/shifttodev">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <p class="copyright text-muted">&copy;  <span>Luciano Cunha</span> <span>2023</span> | Clean Blog theme by <a href="https://startbootstrap.com/template-overviews/clean-blog/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.6.7</span></a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- jQuery -->
+        <script src="../../../vendor/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../../../vendor/bootstrap/js/bootstrap.min.js" ></script>
+
+        <!-- Theme JavaScript -->
+        <script src="../../../js/clean-blog.min.js"></script>
+
+        
+
+    </body>
+
+</html>
